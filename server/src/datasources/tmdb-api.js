@@ -1,6 +1,6 @@
 const { RESTDataSource } = require("apollo-datasource-rest");
 require("dotenv").config();
-const TMDB_KEY = "?api_key=07e2b31565ecb7a732781e14d5f02ca1";
+/// Remove KEY
 
 class TmdbAPI extends RESTDataSource {
   constructor() {
