@@ -1,12 +1,14 @@
 const { RESTDataSource } = require("apollo-datasource-rest");
 require("dotenv").config();
 /// Remove KEY
+const TMDB_KEY = process.env.TMDB_KEY;
 
 class TmdbAPI extends RESTDataSource {
   constructor() {
     super();
     this.baseURL = "https://api.themoviedb.org/3/";
   }
+
   ///GET SINGLE MOVIE and their CREDITS and REVIEWS
   getSingleMovie(movie_id) {
     return this.get(`movie/${movie_id}${TMDB_KEY}`);
